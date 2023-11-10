@@ -1,0 +1,15 @@
+{
+    "name": "alfred",
+    "version": "0.0.0",
+    "license": "ISC",
+    "author": "techbunnie",
+    "description": "A virtual usher project that helps you track attendees to your event big or small!",
+    "main": "./src/index.js",
+    "type": "module",
+    "imports": {
+        "#alfred/*.js": "./src/*.js"
+    },
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    }
+}
