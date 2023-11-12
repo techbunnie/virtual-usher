@@ -14,5 +14,8 @@
     },
     "dependencies": {
         "pino": "^8.16.1"
+    },
+    "devDependencies": {
+        "pino-pretty": "^10.2.3"
     }
 }
