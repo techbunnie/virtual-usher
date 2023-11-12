@@ -1,10 +1,13 @@
-"use strict";
+import * as pino from "pino";
 
-import * as rsvpHandler from "#alfred/handler/rest/rsvp.js"
+import * as rsvpHandler from "#alfred/handler/rest/rsvp.js";
+
+
+const logger = pino.pino();
 
 
 function main() {
-    console.info("hello world!");
+    logger.info("hello world!");
 
     rsvpHandler.init();
 }
