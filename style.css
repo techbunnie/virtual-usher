@@ -1,0 +1,91 @@
+body {
+    text-align: center;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    margin: 8px; /* Add margin to create space between the border and the content */
+}
+
+header {
+    margin-top: 2.5em;
+}
+
+#registration-form {
+    width: 350px;
+    margin: auto;
+}
+
+.registration {
+    text-align: left;
+    /* margin-right: 250px; */
+}
+
+.registration h4 {
+    display: inline-block;
+    border-bottom: 2px solid #EF498F;
+    padding: 4px 0px;
+}
+
+/* Email input box */
+#userInput {
+    display: block;
+    box-sizing: border-box;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin: 0 auto;
+    margin-bottom: 20px;
+    padding: 9px 20px;
+    font-family: inherit;
+    font-size: 16px; /* Increased font size for better visibility */
+    width: 100%;
+    border: 1.5px solid #EF498F;
+    border-radius: 7px;
+    outline: none;
+    transition: background-color 0.3s ease;
+}
+
+/* Add caret color */
+#userInput::placeholder {
+    color: #bebcbd;
+}
+
+/* Hover Effect */
+#userInput:hover {
+    border-color: #555;
+}
+
+/* Focus Effect */
+#userInput:focus {
+    border-color: #75838b;
+    box-shadow: 0 0 5px #75838b;
+}
+
+.submitButton {
+    display: block;
+    margin: 0 auto;
+    padding: 10px 20px;
+    font-size: 16px;
+    width: 100%;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    border-radius: 7px;
+    color: #ffffff;
+    background-color: #EF498F;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    margin-bottom: 30px;
+}
+
+/* Hover Effect */
+.submitButton:hover {
+    background-color: #75838b;
+}
+
+.graphic {
+    margin-bottom: 10px;
+}
+
+.registration h5 {
+    margin-bottom: 50px;
+}
