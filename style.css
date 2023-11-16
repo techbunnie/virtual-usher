@@ -18,10 +18,14 @@ header {
     /* margin-right: 250px; */
 }
 
-.registration h4 {
+.registration .title {
     display: inline-block;
     border-bottom: 2px solid #EF498F;
     padding: 4px 0px;
+}
+
+.registration .message {
+    
 }
 
 /* Email input box */
