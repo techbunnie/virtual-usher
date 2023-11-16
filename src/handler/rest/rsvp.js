@@ -1,5 +1,11 @@
+import * as pino from "pino";
+
+
+const logger = pino.pino();
+
+
 export function init() {
-    console.log("Hello from:", import.meta.url);
+    logger.info({file: import.meta.url}, "Hello from handler");
 }
 
 export function postRSVP() {
