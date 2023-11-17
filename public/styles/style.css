@@ -87,9 +87,29 @@ header {
 }
 
 .graphic {
-    margin-bottom: 10px;
+    margin-bottom: 50px;
 }
 
 .registration h5 {
     margin-bottom: 50px;
+}
+
+#dashboard-count {
+    width: 350px;
+    margin: auto;
+}
+
+.dashboard {
+    text-align: left;
+    /* margin-right: 250px; */
+}
+
+.dashboard .title {
+    display: inline-block;
+    border-bottom: 2px solid #3AA7CA;
+    padding: 4px 0px;
+}
+
+.dashboard .percentage {
+    text-align: center;
 }

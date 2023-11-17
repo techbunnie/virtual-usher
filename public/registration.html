@@ -28,7 +28,6 @@
     </section>
 
     <section class="logo">
-        <h5>Current Attendance %</h5>
         <img src="/public/images/virtual-usher-logo.png" alt="usherlogo" width="74.55" height="34.35">
     </section>
     <footer>
@@ -36,9 +35,18 @@
     </footer>
 
     <script>
-      document.getElementById('registration-form').addEventListener('submit', function(event) {
-        event.preventDefault(); // Prevent the default form submission
 
+    document.getElementById('registration-form').addEventListener('submit', function(event) {
+      event.preventDefault(); // Prevent the default form submission
+    
+        // Validate the email address using a regular expression
+    var emailInput = document.getElementById('userInput').value;
+    var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    if (!emailRegex.test(emailInput)) {
+      alert('Please enter a valid email address.');
+      return;
+    }
         // Perform additional actions here if needed
 
         // Redirect to the confirmation page
