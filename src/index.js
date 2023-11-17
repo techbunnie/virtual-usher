@@ -1,6 +1,6 @@
 import express from "express";
-import * as pino from "pino";
 
+import * as logging from "#alfred/logging.js";
 import * as rsvpHandler from "#alfred/handler/rest/rsvp.js";
 
 
@@ -29,6 +29,7 @@ expressApp.get("/dashboard", (request, response) => {
 function main() {
     logger.info("hello world!");
 
+    logging.root.info("hello world!");
     rsvpHandler.init();
 }
 
@@ -36,4 +37,4 @@ main();
 
 expressApp.listen(expressPort, () => {
     logger.info(`example application now listening at port: ${expressPort}`);
-});
+main();

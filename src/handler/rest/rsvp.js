@@ -1,11 +1,8 @@
-import * as pino from "pino";
-
-
-const logger = pino.pino();
+import * as logging from "#alfred/logging.js";
 
 
 export function init() {
-    logger.info({file: import.meta.url}, "Hello from handler");
+    logging.root.info({file: import.meta.url}, "Hello from handler");
 }
 
 export function postRSVP() {
