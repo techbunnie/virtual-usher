@@ -14,11 +14,12 @@
     
     <form id="registration-form">
       <section class="registration">  
-        <h4 class="title">Register</h4>
+        <h4 class="title">Registration</h4>
       </section>
       
       <section class="input-container">
               <input type="text" id="userInput" name="userInput" placeholder="Enter your work email">
+              <span id="error-message">Please enter a valid email address</span>
               <button class="submitButton">Register Me!</button>
       </section>
     </form>
@@ -36,23 +37,32 @@
 
     <script>
 
+    var emailInput = document.getElementById('userInput');
+    var errorMessage = document.getElementById('error-message');
+
     document.getElementById('registration-form').addEventListener('submit', function(event) {
       event.preventDefault(); // Prevent the default form submission
-    
-        // Validate the email address using a regular expression
-    var emailInput = document.getElementById('userInput').value;
-    var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
-    if (!emailRegex.test(emailInput)) {
-      alert('Please enter a valid email address.');
-      return;
-    }
-        // Perform additional actions here if needed
+      // Validate the email address using a regular expression
+      var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      var isValidEmail = emailRegex.test(emailInput.value);
 
-        // Redirect to the confirmation page
-        window.location.href = 'confirmation.html';
-      });
-    </script>
+      if (!isValidEmail) {
+        errorMessage.textContent = 'Please enter a valid email address.';
+        errorMessage.style.display = 'inline-block'; // Show the error message
+        return;
+      }
+
+      // Clear the error message if the email is valid
+      errorMessage.textContent = '';
+      errorMessage.style.display = 'none';
+
+      // Perform additional actions here if needed
+
+      // Redirect to the confirmation page
+      window.location.href = 'confirmation.html';
+    });
+  </script>
 
 </body>
 </html>

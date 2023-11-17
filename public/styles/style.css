@@ -4,6 +4,11 @@ body {
     margin: 8px; /* Add margin to create space between the border and the content */
 }
 
+a {
+    text-decoration: none;
+    color: inherit;
+  }
+
 header {
     margin-top: 2.5em;
 }
@@ -24,20 +29,17 @@ header {
     padding: 4px 0px;
 }
 
-.registration .message {
-    
-}
-
 /* Email input box */
 #userInput {
     display: block;
     box-sizing: border-box;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     margin: 0 auto;
+    margin-top: 20px;
     margin-bottom: 20px;
     padding: 9px 20px;
     font-family: inherit;
-    font-size: 16px; /* Increased font size for better visibility */
+    font-size: 14px;
     width: 100%;
     border: 1.5px solid #EF498F;
     border-radius: 7px;
@@ -59,6 +61,13 @@ header {
 #userInput:focus {
     border-color: #75838b;
     box-shadow: 0 0 5px #75838b;
+}
+
+#error-message {
+    color: grey;
+    display: none;
+    margin-bottom: 20px;
+    font-size: smaller;
 }
 
 .submitButton {
@@ -92,6 +101,36 @@ header {
 
 .registration h5 {
     margin-bottom: 50px;
+}
+
+.message {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.newReg {
+    display: block;
+    margin: 0 auto;
+    padding: 10px 10px;
+    font-size: 16px;
+    width: 70%;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    border-radius: 7px;
+    color: #ffffff;
+    background-color: #EF498F;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    margin-bottom: 30px;
+}
+
+/* Hover Effect */
+.newReg:hover {
+    background-color: #75838b;
 }
 
 #dashboard-count {
