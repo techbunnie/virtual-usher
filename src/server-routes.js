@@ -3,6 +3,13 @@
  * @param {express.Application} app
  */
 export function init(app) {
+
+    registerPages(app);
+    registerAPIs(app);
+}
+
+
+function registerPages(app) {
     app.get("/", (request, response) => {
         response.send("Hello World!");
     });
@@ -10,8 +17,12 @@ export function init(app) {
     app.get("/registration", (request, response) => {
         response.send("I am suppose to render registration.html here");
     });
+}
 
-    app.get("/dashboard", (request, response) => {
+function registerAPIs(app) {
+    const router = express.Router();
+
+    router.get("/dashboard", (request, response) => {
         response.send(JSON.stringify({
             data: {
                 guestPercent: 87
@@ -19,4 +30,5 @@ export function init(app) {
         }));
     });
 
+    app.use("/api", router);
 }

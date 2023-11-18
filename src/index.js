@@ -7,9 +7,6 @@ import * as serverRoutes from "#alfred/server-routes.js";
 
 
 function main() {
-    logging.root.info("hello world!");
-    rsvpHandler.init();
-
     server.init(process.cwd());
     serverRoutes.init(server.getApplication());
 
