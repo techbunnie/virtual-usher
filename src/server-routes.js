@@ -1,8 +1,14 @@
+import * as express from "express";
+
+import * as rsvpHandler from "#alfred/handler/rest/rsvp.js";
+
+
 /**
  *
  * @param {express.Application} app
  */
 export function init(app) {
+    rsvpHandler.init();
 
     registerPages(app);
     registerAPIs(app);
@@ -14,8 +20,11 @@ function registerPages(app) {
         response.send("Hello World!");
     });
 
+    app.get("/confirmation", rsvpHandler.getConfirmation);
+
     app.get("/registration", (request, response) => {
-        response.send("I am suppose to render registration.html here");
+        // response.render("registration");
+        response.send("TODO: render registration page some day");
     });
 }
 

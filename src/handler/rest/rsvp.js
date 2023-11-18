@@ -5,6 +5,7 @@ export function init() {
     logging.root.info({file: import.meta.url}, "Hello from handler");
 }
 
-export function postRSVP() {
-
+export function getConfirmation(request, response) {
+    // response.render("confirmation");
+    response.send("TODO: render confirmation page some day");
 }
