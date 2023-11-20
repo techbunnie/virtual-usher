@@ -13,6 +13,8 @@ header {
     margin-top: 2.5em;
 }
 
+/* Registration Page*/
+
 #registration-form {
     width: 350px;
     margin: auto;
@@ -23,10 +25,21 @@ header {
     /* margin-right: 250px; */
 }
 
-.registration .title {
+.registration .registerReg {
     display: inline-block;
     border-bottom: 2px solid #EF498F;
     padding: 4px 0px;
+}
+
+.registration .registerProg {
+    display: inline-block;
+    color: rgba(128, 128, 128, 0.801);
+    padding: 4px 15px;
+}
+
+/* Hover Effect */
+.registration .registerProg:hover {
+    color: #555;
 }
 
 /* Email input box */
@@ -96,7 +109,27 @@ header {
 }
 
 .graphic {
-    margin-bottom: 50px;
+    margin-bottom: 20px;
+}
+
+/* Confirmation Page*/
+
+.registration .confirmReg {
+    display: inline-block;
+    border-bottom: 2px solid #EF498F;
+    
+    padding: 4px 0px;
+}
+
+.registration .confirmProg {
+    display: inline-block;
+    color: #808080cc;
+    padding: 4px 15px;
+}
+
+/* Hover Effect */
+.registration .confirmProg:hover {
+    color: #555;
 }
 
 .registration h5 {
@@ -111,7 +144,7 @@ header {
 .newReg {
     display: block;
     margin: 0 auto;
-    padding: 10px 10px;
+    padding: 10px 20px;
     font-size: 16px;
     width: 70%;
     text-align: center;
@@ -133,6 +166,55 @@ header {
     background-color: #75838b;
 }
 
+/*Programme Page*/
+
+.registration .programmeReg{
+    display: inline-block;
+    color: #808080cc;
+    padding: 4px 0px;
+}
+
+.registration .programmeProg {
+    display: inline-block;
+    border-bottom: 2px solid #EF498F;
+    padding: 4px 0px;
+    margin: 15px;
+}
+
+/* Hover Effect */
+.registration .programmeReg:hover {
+    color: #555;
+}
+
+.styled-table {
+    border-collapse: collapse;
+    margin: 0 auto;
+    font-size: 0.9em;
+    min-width: 350px;
+}
+
+.styled-table thead tr {
+    background-color: #878889;
+    color: #ffffff;
+    text-align: center;
+}
+
+.styled-table th,
+.styled-table td {
+    padding: 12px 30px;
+    text-align: center;
+}
+
+.styled-table tbody tr:nth-of-type(even) {
+    background-color: #cad5e097;
+}
+
+.styled-table tbody tr:last-of-type {
+    border-bottom: 2px solid #7a7878;
+}
+
+/* Dashboard Page */
+
 #dashboard-count {
     width: 350px;
     margin: auto;
@@ -150,5 +232,9 @@ header {
 }
 
 .dashboard .percentage {
+    text-align: center;
+}
+
+.dashboard .expectedPax {
     text-align: center;
 }
