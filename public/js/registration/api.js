@@ -1,3 +1,6 @@
+import * as models from "/public/js/models.js";
+
+
 /**
  * register a guest's attendance
  *
@@ -26,4 +29,8 @@ export function postRegistration(guest) {
     localStorage.setItem("ALFRED__GUESTS", JSON.stringify(guests));
 
     return guest;
+}
+
+export function getGuest(guest) {
+    return new models.Guest();
 }
