@@ -19,6 +19,8 @@ export function init(basePath) {
     app.set("view engine", "ejs");
     app.set("alfred.logger", logging.root);
 
+    app.use("/public", express.static(path.join(basePath, "public")));
+
     app.use((request, response, next) => {
         request.log = logging.root.child({
             "request.url": request.path

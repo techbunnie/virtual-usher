@@ -1,17 +1,48 @@
+import * as express from "express";
+
+import * as rsvpHandler from "#alfred/handler/rest/rsvp.js";
+
+
 /**
+ * initialize overall application's routes
  *
  * @param {express.Application} app
  */
 export function init(app) {
+    rsvpHandler.init();
+
+    registerPages(app);
+    registerAPIs(app);
+}
+
+
+/**
+ * initialize the routes that will serve rendered pages
+ *
+ * @param {express.Application} app
+ */
+function registerPages(app) {
     app.get("/", (request, response) => {
         response.send("Hello World!");
     });
 
-    app.get("/registration", (request, response) => {
-        response.send("I am suppose to render registration.html here");
-    });
+    app.get("/confirmation", rsvpHandler.getConfirmation);
 
-    app.get("/dashboard", (request, response) => {
+    app.get("/registration", (request, response) => {
+        // response.render("registration");
+        response.send("TODO: render registration page some day");
+    });
+}
+
+/**
+ * initializes the routes that will serve API response data
+ *
+ * @param {express.Application} app
+ */
+function registerAPIs(app) {
+    const router = express.Router();
+
+    router.get("/dashboard", (request, response) => {
         response.send(JSON.stringify({
             data: {
                 guestPercent: 87
@@ -19,4 +50,5 @@ export function init(app) {
         }));
     });
 
+    app.use("/api", router);
 }
