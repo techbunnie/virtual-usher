@@ -17,6 +17,15 @@ function checkinGuest(email) {
     console.log("Registered guest:", guest);
 }
 
+function findGuest(email) {
+    let guest;
+
+    guest = new models.Guest();
+    guest.email = email;
+
+    return api.getGuest(guest);
+}
+
 ;!function main() {
     const emailInput = document.getElementById('userInput');
     const errorMessage = document.getElementById('error-message');
@@ -29,8 +38,15 @@ function checkinGuest(email) {
       const isValidEmail = emailRegex.test(emailInput.value);
 
       if (!isValidEmail) {
-        errorMessage.textContent = 'Please enter a valid email address.';
+        errorMessage.textContent = "Please enter a valid email address.";
         errorMessage.style.display = 'inline-block'; // Show the error message
+        return;
+      }
+
+      const guest = findGuest(emailInput.value); 
+      if (guest != null) {
+        errorMessage.textContent = "You have already registered.";
+        errorMessage.style.display = 'inline-block';
         return;
       }
 
