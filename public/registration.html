@@ -13,8 +13,9 @@
     </header>
 
     <form id="registration-form">
-      <section class="registration">
-        <h4 class="title">Registration</h4>
+      <section class="registration">  
+        <h4 class="registerReg">Register</h4>
+        <h4 class="registerProg"><a href="/public/programme.html">Programme</h4></a>
       </section>
 
       <section class="input-container">
@@ -25,47 +26,14 @@
     </form>
 
     <section class="graphic">
-        <img src="/public/images/Webinar-cuate.png" alt="LaptopLady" width="378" height="254">
-    </section>
+      <img src="/public/images/Webinar-cuate.png" alt="shorthairlady" width="378" height="254">
+  </section>
 
-    <section class="logo">
-        <img src="/public/images/virtual-usher-logo.png" alt="usherlogo" width="74.55" height="34.35">
-    </section>
     <footer>
-        <h6>© Low Hui Ee</h6>
-    </footer>
-
+      <h6>Virtual Usher<br>© Low Hui Ee</h6>
+  </footer>
 
     <script type="module" src="/public/js/registration/index.js"></script>
-
-    <script>
-
-    var emailInput = document.getElementById('userInput');
-    var errorMessage = document.getElementById('error-message');
-
-    document.getElementById('registration-form').addEventListener('submit', function(event) {
-      event.preventDefault(); // Prevent the default form submission
-
-      // Validate the email address using a regular expression
-      var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-      var isValidEmail = emailRegex.test(emailInput.value);
-
-      if (!isValidEmail) {
-        errorMessage.textContent = 'Please enter a valid email address.';
-        errorMessage.style.display = 'inline-block'; // Show the error message
-        return;
-      }
-
-      // Clear the error message if the email is valid
-      errorMessage.textContent = '';
-      errorMessage.style.display = 'none';
-
-      // Perform additional actions here if needed
-
-      // Redirect to the confirmation page
-      window.location.href = 'confirmation.html';
-    });
-  </script>
 
 </body>
 </html>

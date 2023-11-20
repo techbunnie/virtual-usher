@@ -1,6 +1,5 @@
 /**
  * @property {string} id
- * @property {string} name
  * @property {string} email
  * @property {Date} confirmedAt
  * @property {Date} checkedinAt
@@ -8,7 +7,6 @@
  */
 export class Guest {
     id;
-    name;
     email;
     confirmedAt;
     checkedinAt;
@@ -16,7 +14,6 @@ export class Guest {
 
     constructor() {
         this.id = null;
-        this.name = null;
         this.email = null;
         this.confirmedAt = null;
         this.checkedinAt = null;
