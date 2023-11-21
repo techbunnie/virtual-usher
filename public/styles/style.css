@@ -61,7 +61,7 @@ header {
 }
 
 /* Add caret color */
-#userInput::placeholder {
+#userInput::placeholde {
     color: #bebcbd;
 }
 
@@ -189,28 +189,32 @@ header {
 .styled-table {
     border-collapse: collapse;
     margin: 0 auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
     font-size: 0.9em;
     min-width: 350px;
+    border-radius: 7px 7px 0 0;
+    overflow: hidden;
 }
 
 .styled-table thead tr {
-    background-color: #878889;
+    background-color: #EF498F;
     color: #ffffff;
     text-align: center;
 }
 
 .styled-table th,
 .styled-table td {
-    padding: 12px 30px;
+    padding: 12px 15px;
     text-align: center;
 }
 
 .styled-table tbody tr:nth-of-type(even) {
-    background-color: #cad5e097;
+    background-color: #f3f3f3;
 }
 
 .styled-table tbody tr:last-of-type {
-    border-bottom: 2px solid #7a7878;
+    border-bottom: 2px solid #EF498F;
 }
 
 /* Dashboard Page */
