@@ -4,7 +4,7 @@ import * as models from "/public/js/models.js";
 /**
  * register a guest's attendance
  *
- * @param {Guest} guest the guest who checked-in to the app
+ * @param {models.Guest} guest the guest who checked-in to the app
  */
 export function postRegistration(guest) {
     /**
@@ -12,16 +12,13 @@ export function postRegistration(guest) {
      */
     let guests;
 
-    if (guest.id !== null || (guest.id !== null && guest.id.trim() === "")) {
+    if (guest.id !== null || (guest.id !== null && guest.id.trim() === ""))
         throw new Error("guest already registered");
-    }
 
-    guests = localStorage.getItem("ALFRED__GUESTS");
-
-    if (guests === null)
-        guests = [];
-    else
-        guests = JSON.parse(guests);
+    guests = localStorage.getItem(store.StorageKeyGuests);
+    guests = (guests === null)
+           ? []
+           : JSON.parse(guests);
 
     guest.id = crypto.randomUUID();
     guests.push(guest);
