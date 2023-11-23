@@ -36,6 +36,31 @@ export function postRegistration(guest) {
  *
  * @returns the guest if found or null otherwise
  */
-export function getGuest(guest) {
-    return new models.Guest();
+export function getGuest(guestNeedle) {
+    /**
+     * @type Guest[]
+     */
+    let guests,
+        guest;
+
+    if (guestNeedle === null)
+        return null;
+
+    guests = localStorage.getItem(store.StorageKeyGuests);
+
+    if (guests == null)
+        return null;
+
+    guest = JSON.parse(guests)
+        .map((item) => {
+            return new models.Guest(item);
+        })
+        .find((item) => {
+            return item.email === guestNeedle.email;
+        });
+
+    if (guest === undefined || guest === null)
+        return null;
+    else
+        return guest;
 }

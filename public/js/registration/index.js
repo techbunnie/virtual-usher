@@ -54,7 +54,7 @@ function findGuest(email) {
         return;
       }
 
-      const guest = findGuest(emailInput.value); 
+      const guest = findGuest(emailInput.value);
       if (guest != null) {
         errorMessage.textContent = "You have already registered.";
         errorMessage.style.display = 'inline-block';
