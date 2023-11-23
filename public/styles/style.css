@@ -28,19 +28,20 @@ header {
 
 .registration .registerReg {
     display: inline-block;
+    color: #343434;
     border-bottom: 2px solid #BE3455;
     padding: 4px 0px;
 }
 
 .registration .registerProg {
     display: inline-block;
-    color: rgba(128, 128, 128, 0.801);
+    color: #808080cc;
     padding: 4px 15px;
 }
 
 /* Hover Effect */
 .registration .registerProg:hover {
-    color: #343434;
+    color: #626262;
 }
 
 /* Email input box */
@@ -106,7 +107,7 @@ header {
 
 /* Hover Effect */
 .submitButton:hover {
-    background-color: #343434;
+    background-color: #464646;
 }
 
 .graphic {
@@ -117,8 +118,8 @@ header {
 
 .registration .confirmReg {
     display: inline-block;
+    color: #343434;
     border-bottom: 2px solid #BE3455;
-    
     padding: 4px 0px;
 }
 
@@ -164,7 +165,7 @@ header {
 
 /* Hover Effect */
 .newReg:hover {
-    background-color: #343434;
+    background-color: #464646;
 }
 
 /*Programme Page*/
@@ -177,6 +178,7 @@ header {
 
 .registration .programmeProg {
     display: inline-block;
+    color: #343434;
     border-bottom: 2px solid #be3455;
     padding: 4px 0px;
     margin: 15px;
@@ -184,7 +186,7 @@ header {
 
 /* Hover Effect */
 .registration .programmeReg:hover {
-    color: #555;
+    color: #626262;
 }
 
 .styled-table {
@@ -193,6 +195,7 @@ header {
     margin-top: 20px;
     margin-bottom: 20px;
     font-size: 0.9em;
+    color: #343434;
     min-width: 330px;
     border-radius: 7px 7px 0 0;
     overflow: hidden;
@@ -233,16 +236,19 @@ header {
 
 .dashboard .title {
     display: inline-block;
+    color: #343434;
     border-bottom: 2px solid #3AB0A2;
     padding: 4px 0px;
 }
 
 .dashboard .percentage {
     text-align: center;
+    color: #343434;
 }
 
 .dashboard .expectedPax {
     text-align: center;
+    color: #343434;
 }
 
 footer {
