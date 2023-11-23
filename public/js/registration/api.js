@@ -1,4 +1,5 @@
 import * as models from "/public/js/models.js";
+import * as store from "/public/js/store.js";
 
 
 /**
@@ -28,6 +29,13 @@ export function postRegistration(guest) {
     return guest;
 }
 
+/**
+ * search a guest within the attendance list by email
+ *
+ * @param {models.Guest} guestNeedle
+ *
+ * @returns the guest if found or null otherwise
+ */
 export function getGuest(guest) {
     return new models.Guest();
 }
