@@ -11,6 +11,7 @@ a {
 
 header {
     margin-top: 2.5em;
+    color: #343434;
 }
 
 /* Registration Page*/
@@ -27,7 +28,7 @@ header {
 
 .registration .registerReg {
     display: inline-block;
-    border-bottom: 2px solid #EF498F;
+    border-bottom: 2px solid #BE3455;
     padding: 4px 0px;
 }
 
@@ -39,7 +40,7 @@ header {
 
 /* Hover Effect */
 .registration .registerProg:hover {
-    color: #555;
+    color: #343434;
 }
 
 /* Email input box */
@@ -54,20 +55,20 @@ header {
     font-family: inherit;
     font-size: 14px;
     width: 100%;
-    border: 1.5px solid #EF498F;
+    border: 1.5px solid #BE3455;
     border-radius: 7px;
     outline: none;
     transition: background-color 0.3s ease;
 }
 
 /* Add caret color */
-#userInput::placeholde {
+#userInput::placeholder {
     color: #bebcbd;
 }
 
 /* Hover Effect */
 #userInput:hover {
-    border-color: #555;
+    border-color: #343434;
 }
 
 /* Focus Effect */
@@ -96,7 +97,7 @@ header {
     border: none;
     border-radius: 7px;
     color: #ffffff;
-    background-color: #EF498F;
+    background-color: #BE3455;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     transition: background-color 0.3s ease;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
@@ -105,7 +106,7 @@ header {
 
 /* Hover Effect */
 .submitButton:hover {
-    background-color: #75838b;
+    background-color: #343434;
 }
 
 .graphic {
@@ -116,7 +117,7 @@ header {
 
 .registration .confirmReg {
     display: inline-block;
-    border-bottom: 2px solid #EF498F;
+    border-bottom: 2px solid #BE3455;
     
     padding: 4px 0px;
 }
@@ -154,7 +155,7 @@ header {
     border: none;
     border-radius: 7px;
     color: #ffffff;
-    background-color: #EF498F;
+    background-color: #BE3455;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     transition: background-color 0.3s ease;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
@@ -163,7 +164,7 @@ header {
 
 /* Hover Effect */
 .newReg:hover {
-    background-color: #75838b;
+    background-color: #343434;
 }
 
 /*Programme Page*/
@@ -176,7 +177,7 @@ header {
 
 .registration .programmeProg {
     display: inline-block;
-    border-bottom: 2px solid #EF498F;
+    border-bottom: 2px solid #be3455;
     padding: 4px 0px;
     margin: 15px;
 }
@@ -192,13 +193,13 @@ header {
     margin-top: 20px;
     margin-bottom: 20px;
     font-size: 0.9em;
-    min-width: 350px;
+    min-width: 330px;
     border-radius: 7px 7px 0 0;
     overflow: hidden;
 }
 
 .styled-table thead tr {
-    background-color: #EF498F;
+    background-color: #BE3455;
     color: #ffffff;
     text-align: center;
 }
@@ -210,12 +211,13 @@ header {
 }
 
 .styled-table tbody tr:nth-of-type(even) {
-    background-color: #f3f3f3;
+    background-color: #dedbdb;
 }
 
 .styled-table tbody tr:last-of-type {
-    border-bottom: 2px solid #EF498F;
+    border-bottom: 2px solid #BE3455;
 }
+
 
 /* Dashboard Page */
 
@@ -231,7 +233,7 @@ header {
 
 .dashboard .title {
     display: inline-block;
-    border-bottom: 2px solid #3AA7CA;
+    border-bottom: 2px solid #3AB0A2;
     padding: 4px 0px;
 }
 
@@ -241,4 +243,8 @@ header {
 
 .dashboard .expectedPax {
     text-align: center;
+}
+
+footer {
+    color: #343434;
 }
