@@ -101,7 +101,6 @@ header {
     background-color: #BE3455;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     transition: background-color 0.3s ease;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     margin-bottom: 30px;
 }
 
@@ -241,14 +240,50 @@ header {
     padding: 4px 0px;
 }
 
-.dashboard .percentage {
+.dashboard .adminInstruction {
     text-align: center;
-    color: #343434;
+    color: #4646466a;
+    font-size: 12px;
 }
 
-.dashboard .expectedPax {
+#adminInput {
+    box-sizing: border-box;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin: 0 auto;
+    margin-bottom: 20px;
+    padding: 9px 20px;
+    font-family: inherit;
+    font-size: 14px;
+    width: 30%;
+    border: 1.5px solid #3AB0A2;
+    border-radius: 7px;
+    outline: none;
+    transition: background-color 0.3s ease;
+}
+
+/* Hover Effect */
+#adminInput:hover {
+    border-color: #343434;
+}
+
+.adminButton {
     text-align: center;
-    color: #343434;
+    text-decoration: none;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    border-radius: 7px;
+    color: #ffffff;
+    padding: 10px 10px;
+    background-color: #3AB0A2;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+/* Hover Effect */
+.adminButton:hover {
+    background-color: #464646;
 }
 
 footer {
