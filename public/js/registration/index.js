@@ -2,6 +2,11 @@ import * as api from "/public/js/registration/api.js"
 import * as models from "/public/js/models.js"
 
 
+/**
+ * registers the guest into our current attendees list
+ *
+ * @param {string} email
+ */
 function checkinGuest(email) {
     let now = new Date(),
         guest;
@@ -17,6 +22,12 @@ function checkinGuest(email) {
     console.log("Registered guest:", guest);
 }
 
+/**
+ * search for the guest based on the email
+ *
+ * @param {string} email
+ * @returns
+ */
 function findGuest(email) {
     let guest;
 
@@ -43,7 +54,7 @@ function findGuest(email) {
         return;
       }
 
-      const guest = findGuest(emailInput.value); 
+      const guest = findGuest(emailInput.value);
       if (guest != null) {
         errorMessage.textContent = "You have already registered.";
         errorMessage.style.display = 'inline-block';
