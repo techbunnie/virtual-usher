@@ -223,7 +223,7 @@ header {
 
 /* Dashboard Page */
 
-#dashboard-count {
+#admin-guest-form {
     width: 350px;
     margin: auto;
 }
@@ -246,7 +246,7 @@ header {
     font-size: 12px;
 }
 
-#adminInput {
+#admin-input {
     box-sizing: border-box;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     margin: 0 auto;
@@ -262,11 +262,11 @@ header {
 }
 
 /* Hover Effect */
-#adminInput:hover {
+#admin-input:hover {
     border-color: #343434;
 }
 
-.adminButton {
+.admin-btn {
     text-align: center;
     text-decoration: none;
     cursor: pointer;
@@ -282,7 +282,7 @@ header {
 }
 
 /* Hover Effect */
-.adminButton:hover {
+.admin-btn:hover {
     background-color: #464646;
 }
 

@@ -12,18 +12,21 @@
         <h1>Admin Dashboard</h1>
     </header>
 
-    <form id="dashboard-count">
+    <form id="admin-guest-form">
     <section class="dashboard">
         <h4 class="title">Current Attendance</h4>
         <h5 class="adminInstruction">Enter expected number of attendees</h5>
     </section>
 
     <section class="input-container">
-        <input type="number" id="adminInput" name="adminInput">
-        <button class="adminButton">Calculate</button>
-        <h1 class="percentage">57%</h1>
+        <input id="admin-input" type="number" name="adminInput">
+        <button class="admin-btn">Calculate</button>
     </section>
     </form>
+
+    <section class="input-container">
+        <h1 class="percentage"><span id="guest-percent"></span></h1>
+    </section>
 
     <section class="graphic">
         <img src="/public/images/Analytics2-cuate.png" alt="Analytics" width="370" height="370">
