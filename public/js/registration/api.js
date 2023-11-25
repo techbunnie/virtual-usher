@@ -24,7 +24,7 @@ export function postRegistration(guest) {
     guest.id = crypto.randomUUID();
     guests.push(guest);
 
-    localStorage.setItem("ALFRED__GUESTS", JSON.stringify(guests));
+    localStorage.setItem(store.StorageKeyGuests, JSON.stringify(guests));
 
     return guest;
 }
@@ -34,7 +34,7 @@ export function postRegistration(guest) {
  *
  * @param {models.Guest} guestNeedle
  *
- * @returns the guest if found or null otherwise
+ * @returns {models.Guest} the guest if found or null otherwise
  */
 export function getGuest(guestNeedle) {
     /**
