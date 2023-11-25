@@ -25,7 +25,7 @@ function computeGuestPercent(event) {
 function onDocumentLoaded(htmlEvent) {
     const event = api.getEvent();
 
-    $form.elements["admin-input"].value = event.expectedGuests;
+    $form.elements["expected-guest"].value = event.expectedGuests;
     computeGuestPercent(event);
 }
 
