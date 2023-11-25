@@ -116,6 +116,33 @@ input {
 }
 
 
+.tab {
+    display: inline-block;
+    color: #808080CC;
+    padding: 4px 0;
+    margin-right: 15px;
+}
+
+.tab.active {
+    color: #343434;
+    border-bottom-width: 2px;
+    border-bottom-style: solid;
+}
+
+.tab:hover {
+    color: #626262;
+}
+
+.user-tab.active {
+    border-bottom-color:#BE3455;
+}
+
+.admin-tab.active {
+    border-bottom-color:#3AB0A2;
+}
+
+
+
 /* Registration Page*/
 
 #registration-form {
@@ -212,30 +239,3 @@ input {
 
 
 
-
-
-
-.tab {
-    display: inline-block;
-    color: #808080CC;
-    padding: 4px 0;
-    margin-right: 15px;
-}
-
-.tab.active {
-    color: #343434;
-    border-bottom-width: 2px;
-    border-bottom-style: solid;
-}
-
-.tab:hover {
-    color: #626262;
-}
-
-.user-tab.active {
-    border-bottom-color:#BE3455;
-}
-
-.admin-tab.active {
-    border-bottom-color:#3AB0A2;
-}
