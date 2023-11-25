@@ -1,44 +1,62 @@
-import * as models from "/public/js/models.js"
+import * as models from "/public/js/models.js";
+import * as api from "/public/js/dashboard/api.js";
 
 
-;!function main() {
-    let guests;
+let $form       = null,
+    $percentage = null;
 
-    guests = localStorage.getItem("ALFRED__GUESTS");
-    guests = JSON.parse(guests);
+/**
+ * computes and renders the percentage of attendees vs the expected number of guests set for the event
+ *
+ * @param {models.Event} event
+ */
+function computeGuestPercent(event) {
+    const count   = api.getGuests().length;
+    let   percent;
 
+    if (event.expectedGuests === null || event.expectedGuests === 0)
+        percent = 0;
+    else
+        percent = count / event.expectedGuests * 100;
 
-    console.log("You have the following guests registered:");
+    $percentage.innerText = `${percent.toFixed(2)}%`;
+}
 
-    if (guests === null) {
-        console.log("None");
-        return;
+function onDocumentLoaded(htmlEvent) {
+    const event = api.getEvent();
+
+    $form.elements["admin-input"].value = event.expectedGuests;
+    computeGuestPercent(event);
+}
+
+function onGuestAdminFormSubmitted(htmlEvent) {
+    htmlEvent.preventDefault();
+
+    const $source = htmlEvent.currentTarget,
+          $input  = $source.elements["admin-input"];
+
+    const event = api.getEvent();
+
+    try {
+        if (event === null)
+            throw new Error("event object is required");
+
+        event.setExpectedGuests(parseInt($input.value));
+        event.updatedAt = new Date();
+        api.putEvent(event);
+    }
+    catch (error) {
+        console.error("validation error occurred", error);
     }
 
-    guests.forEach((guestJSON) => {
-        const guest = new models.Guest();
+    computeGuestPercent(event);
+}
 
-        guest.id = guestJSON.id;
-        guest.name = guestJSON.name;
-        guest.email = guestJSON.email;
+;!function main() {
+    $form       = document.getElementById("admin-guest-form"),
+    $percentage = document.getElementById("guest-percent");
 
-        if (guestJSON.confirmedAt !== null)
-            guest.confirmedAt = new Date(guestJSON.confirmedAt);
-        else
-            guest.confirmedAt = null;
+    document.addEventListener("DOMContentLoaded", onDocumentLoaded);
 
-        if (guestJSON.checkedinAt !== null)
-            guest.checkedinAt = new Date(guestJSON.checkedinAt);
-        else
-            guest.checkedinAt = null;
-
-        if (guestJSON.createdAt !== null)
-            guest.createdAt = new Date(guestJSON.createdAt);
-        else
-            guest.createdAt = null;
-
-        console.log(guest);
-    });
-
-    console.log(`Total: ${guests.length} guests`)
+    $form.addEventListener("submit", onGuestAdminFormSubmitted);
 }();
