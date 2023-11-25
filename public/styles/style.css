@@ -1,18 +1,110 @@
+/*
+ **************************************************
+ * Base Overrides
+ **************************************************
+ */
 body {
     text-align: center;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     margin: 8px; /* Add margin to create space between the border and the content */
 }
 
-a {
-    text-decoration: none;
-    color: inherit;
-  }
-
 header {
     margin-top: 2.5em;
     color: #343434;
 }
+
+footer {
+    color: #343434;
+}
+
+a {
+    box-sizing: border-box;
+    text-decoration: none;
+    color: inherit;
+}
+
+input {
+    box-sizing: border-box;
+}
+
+
+/*
+ **************************************************
+ * Common Components
+ **************************************************
+ */
+.btn {
+    display: inline-block;
+    margin: 0 auto;
+    margin-bottom: 30px;
+    padding: 10px 20px;
+    font-size: 16px;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    border-radius: 7px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+    font-family: inherit;
+}
+
+/* Hover Effect */
+.btn:hover {
+    background-color: #464646;
+}
+
+.btn-block {
+    width: 100%;
+    display: block;
+}
+
+.user-btn {
+    color: #ffffff;
+    background-color: #BE3455;
+}
+
+.admin-btn {
+    color: #ffffff;
+    background-color: #3AB0A2;
+    padding: 10px 10px;
+}
+
+.input-text {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin: 0 auto;
+    margin-bottom: 20px;
+    padding: 9px 20px;
+    font-family: inherit;
+    font-size: 14px;
+    border: 1.5px solid #BE3455;
+    border-radius: 7px;
+    outline: none;
+    transition: background-color 0.3s ease;
+}
+
+.input-text:hover {
+    border-color: #343434;
+}
+
+/* Add caret color */
+.input-text::placeholder {
+    color: #bebcbd;
+}
+
+/* Focus Effect */
+.input-text:focus {
+    border-color: #75838b;
+    box-shadow: 0 0 5px #75838b;
+}
+
+.input-block {
+    width: 100%;
+    display: block;
+}
+
 
 /* Registration Page*/
 
@@ -44,38 +136,8 @@ header {
     color: #626262;
 }
 
-/* Email input box */
-#userInput {
-    display: block;
-    box-sizing: border-box;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    margin: 0 auto;
+.user-input {
     margin-top: 20px;
-    margin-bottom: 20px;
-    padding: 9px 20px;
-    font-family: inherit;
-    font-size: 14px;
-    width: 100%;
-    border: 1.5px solid #BE3455;
-    border-radius: 7px;
-    outline: none;
-    transition: background-color 0.3s ease;
-}
-
-/* Add caret color */
-#userInput::placeholder {
-    color: #bebcbd;
-}
-
-/* Hover Effect */
-#userInput:hover {
-    border-color: #343434;
-}
-
-/* Focus Effect */
-#userInput:focus {
-    border-color: #75838b;
-    box-shadow: 0 0 5px #75838b;
 }
 
 #error-message {
@@ -83,30 +145,6 @@ header {
     display: none;
     margin-bottom: 20px;
     font-size: smaller;
-}
-
-.submitButton {
-    display: block;
-    margin: 0 auto;
-    padding: 10px 20px;
-    font-size: 16px;
-    width: 100%;
-    text-align: center;
-    text-decoration: none;
-    cursor: pointer;
-    outline: none;
-    border: none;
-    border-radius: 7px;
-    color: #ffffff;
-    background-color: #BE3455;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: background-color 0.3s ease;
-    margin-bottom: 30px;
-}
-
-/* Hover Effect */
-.submitButton:hover {
-    background-color: #464646;
 }
 
 .graphic {
@@ -142,30 +180,7 @@ header {
     margin-bottom: 30px;
 }
 
-.newReg {
-    display: block;
-    margin: 0 auto;
-    padding: 10px 20px;
-    font-size: 16px;
-    width: 70%;
-    text-align: center;
-    text-decoration: none;
-    cursor: pointer;
-    outline: none;
-    border: none;
-    border-radius: 7px;
-    color: #ffffff;
-    background-color: #BE3455;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: background-color 0.3s ease;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    margin-bottom: 30px;
-}
 
-/* Hover Effect */
-.newReg:hover {
-    background-color: #464646;
-}
 
 /*Programme Page*/
 
@@ -223,7 +238,7 @@ header {
 
 /* Dashboard Page */
 
-#admin-guest-form {
+#admin-count-form {
     width: 350px;
     margin: auto;
 }
@@ -246,46 +261,11 @@ header {
     font-size: 12px;
 }
 
-#admin-input {
-    box-sizing: border-box;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    margin: 0 auto;
-    margin-bottom: 20px;
+.admin-input {
     padding: 9px 20px;
     font-family: inherit;
     font-size: 14px;
     width: 30%;
-    border: 1.5px solid #3AB0A2;
-    border-radius: 7px;
-    outline: none;
-    transition: background-color 0.3s ease;
+    border-color: #3AB0A2;
 }
 
-/* Hover Effect */
-#admin-input:hover {
-    border-color: #343434;
-}
-
-.admin-btn {
-    text-align: center;
-    text-decoration: none;
-    cursor: pointer;
-    outline: none;
-    border: none;
-    border-radius: 7px;
-    color: #ffffff;
-    padding: 10px 10px;
-    background-color: #3AB0A2;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: background-color 0.3s ease;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-}
-
-/* Hover Effect */
-.admin-btn:hover {
-    background-color: #464646;
-}
-
-footer {
-    color: #343434;
-}
