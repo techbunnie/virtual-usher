@@ -105,6 +105,16 @@ input {
     display: block;
 }
 
+.user-input {
+    margin-top: 20px;
+}
+
+.admin-input {
+    padding: 9px 20px;
+    width: 30%;
+    border-color: #3AB0A2;
+}
+
 
 /* Registration Page*/
 
@@ -116,28 +126,6 @@ input {
 .registration {
     text-align: left;
     /* margin-right: 250px; */
-}
-
-.registration .registerReg {
-    display: inline-block;
-    color: #343434;
-    border-bottom: 2px solid #BE3455;
-    padding: 4px 0px;
-}
-
-.registration .registerProg {
-    display: inline-block;
-    color: #808080cc;
-    padding: 4px 15px;
-}
-
-/* Hover Effect */
-.registration .registerProg:hover {
-    color: #626262;
-}
-
-.user-input {
-    margin-top: 20px;
 }
 
 #error-message {
@@ -153,24 +141,6 @@ input {
 
 /* Confirmation Page*/
 
-.registration .confirmReg {
-    display: inline-block;
-    color: #343434;
-    border-bottom: 2px solid #BE3455;
-    padding: 4px 0px;
-}
-
-.registration .confirmProg {
-    display: inline-block;
-    color: #808080cc;
-    padding: 4px 15px;
-}
-
-/* Hover Effect */
-.registration .confirmProg:hover {
-    color: #555;
-}
-
 .registration h5 {
     margin-bottom: 50px;
 }
@@ -183,25 +153,6 @@ input {
 
 
 /*Programme Page*/
-
-.registration .programmeReg{
-    display: inline-block;
-    color: #808080cc;
-    padding: 4px 0px;
-}
-
-.registration .programmeProg {
-    display: inline-block;
-    color: #343434;
-    border-bottom: 2px solid #be3455;
-    padding: 4px 0px;
-    margin: 15px;
-}
-
-/* Hover Effect */
-.registration .programmeReg:hover {
-    color: #626262;
-}
 
 .styled-table {
     border-collapse: collapse;
@@ -248,24 +199,43 @@ input {
     /* margin-right: 250px; */
 }
 
-.dashboard .title {
-    display: inline-block;
-    color: #343434;
-    border-bottom: 2px solid #3AB0A2;
-    padding: 4px 0px;
-}
-
 .dashboard .adminInstruction {
     text-align: center;
     color: #4646466a;
     font-size: 12px;
 }
 
-.admin-input {
-    padding: 9px 20px;
-    font-family: inherit;
-    font-size: 14px;
-    width: 30%;
-    border-color: #3AB0A2;
+
+
+
+
+
+
+
+
+
+
+.tab {
+    display: inline-block;
+    color: #808080CC;
+    padding: 4px 0;
+    margin-right: 15px;
 }
 
+.tab.active {
+    color: #343434;
+    border-bottom-width: 2px;
+    border-bottom-style: solid;
+}
+
+.tab:hover {
+    color: #626262;
+}
+
+.user-tab.active {
+    border-bottom-color:#BE3455;
+}
+
+.admin-tab.active {
+    border-bottom-color:#3AB0A2;
+}
