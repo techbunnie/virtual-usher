@@ -33,7 +33,7 @@ function onGuestAdminFormSubmitted(htmlEvent) {
     htmlEvent.preventDefault();
 
     const $source = htmlEvent.currentTarget,
-          $input  = $source.elements["admin-input"];
+          $input  = $source.elements["expected-guest"];
 
     const event = api.getEvent();
 
@@ -53,7 +53,7 @@ function onGuestAdminFormSubmitted(htmlEvent) {
 }
 
 ;!function main() {
-    $form       = document.getElementById("admin-guest-form"),
+    $form       = document.getElementById("admin-count-form"),
     $percentage = document.getElementById("guest-percent");
 
     document.addEventListener("DOMContentLoaded", onDocumentLoaded);
