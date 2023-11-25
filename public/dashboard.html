@@ -1,35 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Admin Dashboard - TechUp</title>
-  <link rel="stylesheet" href="/public/styles/style.css">
+    <meta charset="UTF-8">
+    <title>Admin Dashboard - TechUp</title>
+    <link rel="stylesheet" href="/public/styles/style.css">
 </head>
 <body>
-
     <header>
         <h3>TechUp</h3>
         <h1>Admin Dashboard</h1>
     </header>
 
-    <form id="admin-count-form">
-    <section class="dashboard">
-        <h4 class="tab admin-tab active">Current Attendance</h4>
-        <h5 class="adminInstruction">Enter expected number of attendees</h5>
+    <section class="content">
+        <div class="tab-container">
+            <h4 class="tab admin-tab active">Current Attendance</h4>
+        </div>
     </section>
 
-    <section class="input-container">
-        <input class="admin-input input-text" type="number" name="expected-guest">
-        <button class="admin-btn btn">Calculate</button>
-    </section>
-    </form>
+    <section class="content">
+        <h5 class="form-heading">Enter expected number of attendees</h5>
 
-    <section class="input-container">
+        <form id="admin-count-form">
+            <input class="admin-input input-text" type="number" name="expected-guest"/>
+            <button class="admin-btn btn">Calculate</button>
+        </form>
+    </section>
+
+    <section class="content">
         <h1 class="percentage"><span id="guest-percent"></span></h1>
     </section>
 
-    <section class="graphic">
-        <img src="/public/images/Analytics2-cuate.png" alt="Analytics" width="370" height="370">
+    <section class="content">
+        <img src="/public/images/Analytics2-cuate.png" alt="Analytics" width="370" height="370"/>
     </section>
 
     <footer>

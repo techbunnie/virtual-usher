@@ -26,20 +26,29 @@ a {
 
 input {
     box-sizing: border-box;
+    font-size: 16px;
+}
+
+button {
+    font-size: 16px;
 }
 
 
 /*
  **************************************************
- * Common Components
+ * Global Components
  **************************************************
  */
+.content {
+    width: 350px;
+    margin: 0 auto;
+}
+
 .btn {
     display: inline-block;
     margin: 0 auto;
     margin-bottom: 30px;
     padding: 10px 20px;
-    font-size: 16px;
     text-align: center;
     text-decoration: none;
     cursor: pointer;
@@ -61,15 +70,10 @@ input {
     display: block;
 }
 
-.user-btn {
-    color: #ffffff;
-    background-color: #BE3455;
-}
-
-.admin-btn {
-    color: #ffffff;
-    background-color: #3AB0A2;
-    padding: 10px 10px;
+.form-heading {
+    text-align: center;
+    color: #4646466a;
+    font-size: 12px;
 }
 
 .input-text {
@@ -78,7 +82,6 @@ input {
     margin-bottom: 20px;
     padding: 9px 20px;
     font-family: inherit;
-    font-size: 14px;
     border: 1.5px solid #BE3455;
     border-radius: 7px;
     outline: none;
@@ -105,16 +108,10 @@ input {
     display: block;
 }
 
-.user-input {
-    margin-top: 20px;
+.tab-container {
+    display: block;
+    text-align: left;
 }
-
-.admin-input {
-    padding: 9px 20px;
-    width: 30%;
-    border-color: #3AB0A2;
-}
-
 
 .tab {
     display: inline-block;
@@ -131,6 +128,33 @@ input {
 
 .tab:hover {
     color: #626262;
+}
+
+
+/*
+ **************************************************
+ * Common Components
+ **************************************************
+ */
+.user-btn {
+    color: #ffffff;
+    background-color: #BE3455;
+}
+
+.admin-btn {
+    color: #ffffff;
+    background-color: #3AB0A2;
+    padding: 10px 10px;
+}
+
+.user-input {
+    margin-top: 20px;
+}
+
+.admin-input {
+    padding: 9px 20px;
+    width: 30%;
+    border-color: #3AB0A2;
 }
 
 .user-tab.active {
@@ -213,24 +237,6 @@ input {
     border-bottom: 2px solid #BE3455;
 }
 
-
-/* Dashboard Page */
-
-#admin-count-form {
-    width: 350px;
-    margin: auto;
-}
-
-.dashboard {
-    text-align: left;
-    /* margin-right: 250px; */
-}
-
-.dashboard .adminInstruction {
-    text-align: center;
-    color: #4646466a;
-    font-size: 12px;
-}
 
 
 
