@@ -45,7 +45,7 @@ function findGuest(email) {
       event.preventDefault(); // Prevent the default form submission
 
       // Validate the email address using a regular expression
-      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      const emailRegex = /^[^\s@]+@[^\s@]+gov\.sg$/;
       const isValidEmail = emailRegex.test(emailInput.value);
 
       if (!isValidEmail) {
