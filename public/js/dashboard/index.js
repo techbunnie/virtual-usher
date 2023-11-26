@@ -19,7 +19,7 @@ function computeGuestPercent(event) {
     else
         percent = count / event.expectedGuests * 100;
 
-    $percentage.innerText = `${percent.toFixed(2)}%`;
+    $percentage.innerText = `${percent.toFixed(0)}%`;
 }
 
 function onDocumentLoaded(htmlEvent) {
