@@ -1,5 +1,5 @@
-import * as models from "/public/js/models.js";
-import * as api from "/public/js/dashboard/api.js";
+import * as models from "/js/models.js";
+import * as api from "/js/dashboard/api.js";
 
 
 let $form       = null,

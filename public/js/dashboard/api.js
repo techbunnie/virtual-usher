@@ -1,5 +1,5 @@
-import * as models from "/public/js/models.js";
-import * as store from "/public/js/store.js";
+import * as models from "/js/models.js";
+import * as store from "/js/store.js";
 
 
 /**

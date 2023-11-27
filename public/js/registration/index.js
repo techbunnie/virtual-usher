@@ -1,5 +1,5 @@
-import * as api from "/public/js/registration/api.js";
-import * as models from "/public/js/models.js";
+import * as api from "/js/registration/api.js";
+import * as models from "/js/models.js";
 
 
 /**
