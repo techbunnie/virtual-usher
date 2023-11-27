@@ -1,0 +1,52 @@
+version: "3.8"
+
+services:
+    server:
+        image: alfred/node:0.0.0-dev
+        build:
+            context: ..
+            dockerfile: ./build/server.Dockerfile
+        deploy:
+            resources:
+                limits:
+                    cpus: "0.25"
+                    memory: 64M
+                reservations:
+                    cpus: "0.25"
+                    memory: 64M
+        volumes:
+            - .:/opt/alfred
+        environment:
+            ALFRED_DB_HOST: db
+            ALFRED_DB_PORT: 5432
+            ALFRED_DB_SCHEMA: alfred
+            ALFRED_DB_USERNAME: alfred
+            ALFRED_DB_PASSWORD: alfred
+        command: ["pnpm", "run", "full"]
+        networks:
+            - default
+        ports:
+            - 3000:3000
+
+    db:
+        image: postgres:16-alpine
+        deploy:
+            resources:
+                limits:
+                    cpus: "0.25"
+                    memory: 64M
+                reservations:
+                    cpus: "0.25"
+                    memory: 64M
+        volumes:
+            - db:/var/lib/postgresql/data
+        environment:
+            POSTGRES_USER: alfred
+            POSTGRES_PASSWORD: alfred
+            POSTGRES_DB: alfred
+
+volumes:
+    db:
+
+networks:
+    default:
