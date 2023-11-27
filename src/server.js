@@ -7,6 +7,7 @@ import * as logging from "#alfred/logging.js";
 
 let app;
 
+
 /**
  * initialize and configure the ExpressJS application
  *
