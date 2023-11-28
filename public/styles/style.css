@@ -190,6 +190,14 @@ button {
     margin-bottom: 20px;
 }
 
+.home:hover {
+    color: #BE3455;
+}
+
+.about:hover {
+    color: #BE3455;
+}
+
 /* Confirmation Page*/
 
 .registration h5 {
@@ -233,6 +241,23 @@ button {
 
 .styled-table tbody tr:last-of-type {
     border-bottom: 2px solid #BE3455;
+}
+/* About */
+
+.desc {
+    text-align: justify;
+    font-weight: 100;
+    margin-bottom: 40px;
+}
+
+.creator {
+    border-radius: 7px;
+    overflow: hidden;
+}
+
+.creator:hover {
+    filter: grayscale(100%);
+    transition: filter 0.1s ease-in-out;
 }
 
 /* Dashboard */
