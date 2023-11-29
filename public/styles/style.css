@@ -6,7 +6,7 @@
 body {
     text-align: center;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    margin: 8px; /* Add margin to create space between the border and the content */
+    margin: 8px; 
 }
 
 header {
@@ -198,7 +198,7 @@ button {
     color: #BE3455;
 }
 
-/* Confirmation Page*/
+/* Confirmation Page */
 
 .registration h5 {
     margin-bottom: 50px;
@@ -209,7 +209,7 @@ button {
     margin-bottom: 30px;
 }
 
-/*Programme Page*/
+/* Programme Page */
 
 .styled-table {
     border-collapse: collapse;
@@ -242,12 +242,13 @@ button {
 .styled-table tbody tr:last-of-type {
     border-bottom: 2px solid #BE3455;
 }
+
 /* About */
 
 .desc {
     text-align: justify;
     font-weight: 100;
-    margin-bottom: 40px;
+    margin-bottom: 60px;
 }
 
 .creator {
