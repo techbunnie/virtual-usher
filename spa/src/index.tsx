@@ -11,7 +11,7 @@ import * as app from "@alfred/app.tsx";
     const rootJSX = (
         <auth0.Auth0Provider
             domain="dev-u56gpeyi30cng4h8.us.auth0.com"
-            clientId="YdFjxiDfhPxfxFs1iNkpB3V9CpzwSMN1"
+            clientId="test"
             authorizationParams={{
                 "audience": "http://alfred.techbunnie.io",
                 "redirect_uri": "https://localhost:8000/auth/callback",
