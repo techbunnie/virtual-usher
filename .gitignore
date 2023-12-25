@@ -1,1 +1,4 @@
-node_modules/
+.DS_Store
+
+spa/node_modules/
+spa/build/
